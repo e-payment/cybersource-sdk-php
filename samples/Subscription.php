@@ -2,15 +2,15 @@
 // This sample demonstrates how to create a subscription
 
 // Using Composer-generated autoload file.
-require __DIR__ . '/../vendor/autoload.php';
+//require __DIR__ . '/../vendor/autoload.php';
 // Or, uncomment the line below if you're not using Composer autoloader.
-// require_once(__DIR__ . '/../lib/CybsSoapClient.php');
-
+require_once(__DIR__ . '/../lib/CybsSoapClient.php');
+require_once('config.php');
 
 // Before using this example, you can use your own reference code for the transaction.
-$referenceCode = 'your_merchant_reference_code';
+$referenceCode = date('YmdHis');
 
-$client = new CybsSoapClient();
+$client = new CybsSoapClient($soap_config);
 $request = $client->createRequest($referenceCode);
 
 // This section contains a sample transaction request for creating a subscription
@@ -47,7 +47,7 @@ $recurringSubscriptionInfo->frequency = 'monthly';
 $recurringSubscriptionInfo->amount = '11.00';
 $recurringSubscriptionInfo->automaticRenew = 'false';
 $recurringSubscriptionInfo->numberOfPayments = '4';
-$recurringSubscriptionInfo->startDate = '20140221';
+$recurringSubscriptionInfo->startDate = '20170418';
 
 $request->recurringSubscriptionInfo = $recurringSubscriptionInfo;
 

@@ -3,15 +3,15 @@
 // authorization with a capture in one request.
 
 // Using Composer-generated autoload file.
-require __DIR__ . '/../vendor/autoload.php';
+//require __DIR__ . '/../vendor/autoload.php';
 // Or, uncomment the line below if you're not using Composer autoloader.
-// require_once(__DIR__ . '/../lib/CybsSoapClient.php');
-
+require_once(__DIR__ . '/../lib/CybsSoapClient.php');
+require_once('config.php');
 
 // Before using this example, you can use your own reference code for the transaction.
-$referenceCode = 'your_merchant_reference_code';
+$referenceCode = date('YmdHis');
 
-$client = new CybsSoapClient();
+$client = new CybsSoapClient($soap_config);
 $request = $client->createRequest($referenceCode);
 
 // Build a sale request (combining an auth and capture). In this example only
@@ -52,4 +52,4 @@ $reply = $client->runTransaction($request);
 // This section will show all the reply fields.
 echo '<pre>';
 print("\nRESPONSE: " . print_r($reply, true));
-echo '</pre>';
+echo '</pre>' . PHP_EOL;
