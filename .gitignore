@@ -6,4 +6,4 @@
 /composer.lock
 
 # CyberSource config parameters
-/lib/conf/cybs.ini
+lib/conf/cybs.ini
