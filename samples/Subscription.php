@@ -20,22 +20,21 @@ $paySubscriptionCreateService->run = 'true';
 $request->paySubscriptionCreateService = $paySubscriptionCreateService;
 
 $billTo = new stdClass();
-$billTo->firstName = 'John';
-$billTo->lastName = 'Doe';
-$billTo->street1 = '1295 Charleston Road';
-$billTo->city = 'Mountain View';
-$billTo->state = 'CA';
+$billTo->firstName  = 'John';
+$billTo->lastName   = 'Doe';
+$billTo->street1    = '1295 Charleston Road';
+$billTo->city       = 'Mountain View';
+$billTo->state      = 'CA';
 $billTo->postalCode = '94043';
-$billTo->country = 'US';
-$billTo->email = 'null@cybersource.com';
-$billTo->ipAddress = '10.7.111.111';
-$request->billTo = $billTo;
+$billTo->country    = 'US';
+$billTo->email      = 'null@cybersource.com';
+$billTo->ipAddress  = '10.7.7.7';
+$request->billTo    = $billTo;
 
 $card = new stdClass();
-$card->accountNumber = '4111111111111111';
+$card->accountNumber   = '4111111111111111';
 $card->expirationMonth = '12';
-$card->expirationYear = '2020';
-$card->cardType='001';
+$card->expirationYear  = '2020';
 $request->card = $card;
 
 $purchaseTotals = new stdClass();
@@ -60,8 +59,8 @@ print("\nSUBSCRIPTION RESPONSE: " . print_r($reply, true));
 if ($reply->decision != 'ACCEPT') {
     print("\nFailed subscription request.\n");
 }
-else
-{
+else {
     print("\n Subscription service request successful\n");
 }
+
 echo '</pre>';

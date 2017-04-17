@@ -1,6 +1,6 @@
 <?php
-// This sample demonstrates how to run a sale request, which combines an
-// authorization with a capture in one request.
+// This sample demonstrates how to run an auth request for two items with a flat
+// name-value pair structure
 
 // Using Composer-generated autoload file.
 //require __DIR__ . '/../vendor/autoload.php';
@@ -14,15 +14,9 @@ $referenceCode = date('YmdHis');
 $client = new CybsSoapClient($soap_config);
 $request = $client->createRequest($referenceCode);
 
-// Build a sale request (combining an auth and capture). In this example only
-// the amount is provided for the purchase total.
 $ccAuthService = new stdClass();
 $ccAuthService->run = 'true';
 $request->ccAuthService = $ccAuthService;
-
-$ccCaptureService = new stdClass();
-$ccCaptureService->run = 'true';
-$request->ccCaptureService = $ccCaptureService;
 
 $billTo = new stdClass();
 $billTo->firstName  = 'John';
@@ -43,13 +37,33 @@ $card->expirationYear  = '2020';
 $request->card = $card;
 
 $purchaseTotals = new stdClass();
-$purchaseTotals->currency = 'USD';
-$purchaseTotals->grandTotalAmount = '90.01';
+$purchaseTotals->currency = 'THB';
+$purchaseTotals->grandTotalAmount = '999.50';
+$request->purchaseTotals = $purchaseTotals;
+
+$reply = $client->runTransaction($request);
+print_r($reply);
+
+
+/// REVERSAL ///
+
+$authRequestID = $reply->requestID;
+print_r($authRequestID) . PHP_EOL;
+
+$client = new CybsSoapClient($soap_config);
+$request = $client->createRequest($referenceCode);
+
+$ccAuthReversalService = new stdClass();
+$ccAuthReversalService->run = 'true';
+$ccAuthReversalService->authRequestID = $authRequestID;
+$request->ccAuthReversalService = $ccAuthReversalService;
+
+$purchaseTotals = new stdClass();
+$purchaseTotals->currency = 'THB';
+$purchaseTotals->grandTotalAmount = '999.50';
 $request->purchaseTotals = $purchaseTotals;
 
 $reply = $client->runTransaction($request);
 
-// This section will show all the reply fields.
-echo '<pre>';
-print("\nRESPONSE: " . print_r($reply, true));
-echo '</pre>' . PHP_EOL;
+print_r($reply);
+echo PHP_EOL;
