@@ -34,5 +34,8 @@ $request->purchaseTotals = $purchaseTotals;
 
 $reply = $client->runTransaction($request);
 
+ob_clean();
+header("Content-Type: text/plain");
+
 print_r($reply);
 echo PHP_EOL;

@@ -36,7 +36,6 @@ $request->purchaseTotals  = $purchaseTotals;
 $card_types = array('4' => '001', '5' => '002', '3' => '007');
 
 $card = new stdClass();
-
 // $card->accountNumber   = '4000000000000002';
 $card->accountNumber   = '5200000000000007';
 // $card->accountNumber   = '3569990010083722';
@@ -82,7 +81,8 @@ if ($canValdiateAuthen === true) {
 	$acsURL = $reply->payerAuthEnrollReply->acsURL;
 	$paReq  = $reply->payerAuthEnrollReply->paReq;
 	$xid    = $reply->payerAuthEnrollReply->xid;
-	$termUrl = 'http://127.0.0.1:8088/ACSResponse.php';
+	//$termUrl = 'http://127.0.0.1:8088/ACSResponse.php';
+	$termUrl = 'http://127.0.0.1:8088/PayerAuthValidate.php';
 
 	$reply->payerAuthEnrollReply->proofXML = htmlentities(formatXml($reply->payerAuthEnrollReply->proofXML));
 

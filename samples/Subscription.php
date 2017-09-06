@@ -34,19 +34,20 @@ $request->billTo    = $billTo;
 $card = new stdClass();
 $card->accountNumber   = '4111111111111111';
 $card->expirationMonth = '12';
-$card->expirationYear  = '2020';
-$request->card = $card;
+$card->expirationYear  = '2022';
+$card->cardType        = '001'; // CardType => https://goo.gl/eoLV7o
+$request->card         = $card;
 
 $purchaseTotals = new stdClass();
-$purchaseTotals->currency = 'USD';
-$request->purchaseTotals = $purchaseTotals;
+$purchaseTotals->currency = 'THB';
+$request->purchaseTotals  = $purchaseTotals;
 
 $recurringSubscriptionInfo = new stdClass();
-$recurringSubscriptionInfo->frequency = 'monthly';
-$recurringSubscriptionInfo->amount = '11.00';
-$recurringSubscriptionInfo->automaticRenew = 'false';
+$recurringSubscriptionInfo->frequency        = 'monthly';
+$recurringSubscriptionInfo->amount           = '11.00';
+$recurringSubscriptionInfo->automaticRenew   = 'false';
 $recurringSubscriptionInfo->numberOfPayments = '4';
-$recurringSubscriptionInfo->startDate = '20170418';
+$recurringSubscriptionInfo->startDate        = '20171031';
 
 $request->recurringSubscriptionInfo = $recurringSubscriptionInfo;
 
