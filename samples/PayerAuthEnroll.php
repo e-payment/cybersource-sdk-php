@@ -36,8 +36,8 @@ $request->purchaseTotals  = $purchaseTotals;
 $card_types = array('4' => '001', '5' => '002', '3' => '007');
 
 $card = new stdClass();
-// $card->accountNumber   = '4000000000000002';
-$card->accountNumber   = '5200000000000007';
+$card->accountNumber   = '4000000000000002';
+// $card->accountNumber   = '5200000000000007';
 // $card->accountNumber   = '3569990010083722';
 $card->expirationMonth = '12';
 $card->expirationYear  = '2020';

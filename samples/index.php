@@ -25,7 +25,14 @@
 <div class="container">
 	<div class="col-sm-8 col-md-8 col-lg-6">
 	    <div class="row">
+	    	<h1>Cybersource PHP SDK</h1>
 		    <h3>Auth / Sale / Void / Refund</h3>
+
+<pre>
+Authorize    => Full Authorization
+Settlement   => Void
+Transmitted  => Refeund
+</pre>
 		    <ul>
 		    	<li><a href="AuthFromNameValuePairs.php">AuthFromNameValuePairs</a></li>
 		    	<li><a href="AuthFromXml.php">AuthFromXml</a></li>
