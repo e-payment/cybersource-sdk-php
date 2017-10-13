@@ -24,7 +24,7 @@ If you want to install SDK from Packagist,add the following dependency to your a
 
 sample file `cybs.ini`
 
-```
+```ini
 merchant_id = your_merchant_id 
 transaction_key = "your_transaction_key"
 
