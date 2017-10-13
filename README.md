@@ -38,8 +38,10 @@ nvp_wsdl = "https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor/CyberSo
 ## Installation
 You can install the client either via [Composer](https://getcomposer.org/) or manually. Before installing, make sure to configure the merchant ID, transaction key, and the appropriate WSDL file URL in ````cybs.ini````. By default, the WSDL file for the client is for API version 1.120 (the latest when this package was updated). Available WSDL file URLs can be browsed at the following locations:
 
-- [test](https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor/)
-- [live](https://ics2ws.ic3.com/commerce/1.x/transactionProcessor/)
+```
+ TEST: https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor/
+ LIVE: https://ics2ws.ic3.com/commerce/1.x/transactionProcessor/
+```
 
 ### Installing with Composer
 You'll first need to make sure you have Composer installed. You can follow the instructions on the [official web site](https://getcomposer.org/download/). Once Composer is installed, you can enter the project root and run:
