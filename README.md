@@ -13,8 +13,10 @@ If you want to install SDK from Packagist,add the following dependency to your a
 ```
 ## Prerequisites
 
-- PHP 5.3 or above
-   - [curl](http://php.net/manual/en/book.curl.php), [openssl](http://php.net/manual/en/book.openssl.php), [soap](http://php.net/manual/en/book.soap.php) extensions must be enabled
+- PHP 5.3 or above and extensions must be enabled.
+   - [curl](http://php.net/manual/en/book.curl.php)
+   - [openssl](http://php.net/manual/en/book.openssl.php)
+   - [soap](http://php.net/manual/en/book.soap.php) 
 - A CyberSource account. You can create an evaluation account [here](http://www.cybersource.com/register/).
 - A CyberSource transaction key. You will need to set your **merchant ID** and **transaction key** in the `cybs.ini` file in `lib/conf`. Instructions on obtaining a transaction key can be found [here](http://www.cybersource.com/developers/integration_methods/simple_order_and_soap_toolkit_api/soap_api/html/wwhelp/wwhimpl/js/html/wwhelp.htm#href=Intro.04.3.html).
 
