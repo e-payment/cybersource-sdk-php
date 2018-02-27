@@ -8,23 +8,20 @@
 require_once(__DIR__ . '/../lib/CybsSoapClient.php');
 require_once('config.php');
 
+// voidRequestID
+$voidRequestID = '5197433748476290103010';
+
 // Before using this example, you can use your own reference code for the transaction.
-$referenceCode = '20180227215613';
-$captureRequestID = '5197433748476290103010';
+$referenceCode = date('YmdHis');
 
 $client = new CybsSoapClient($soap_config);
 $request = $client->createRequest($referenceCode);
 
 // Applications: Credit Card Credit
-$ccCreditService = new stdClass();
-$ccCreditService->run = 'true';
-$ccCreditService->captureRequestID = $captureRequestID;
-$request->ccCreditService = $ccCreditService;
-
-$purchaseTotals = new stdClass();
-$purchaseTotals->currency = 'THB';
-$purchaseTotals->grandTotalAmount = '2000.00';
-$request->purchaseTotals = $purchaseTotals;
+$voidService = new stdClass();
+$voidService->run = 'true';
+$voidService->voidRequestID = $voidRequestID;
+$request->voidService = $voidService;
 
 $reply = $client->runTransaction($request);
 

@@ -41,6 +41,7 @@
 		    	<li><a href="Sale.php">Sale (Auth and Capture)</a></li>
 		    	<li><a href="AuthAndReverse.php">Auth And Reverse</a></li>
 		    	<li><a href="Credit.php">Credit (Refund)</a></li>
+		    	<li><a href="Void.php">Void</a></li>
 		    </ul>
 
 		    <h3>Payer Authen (3-D Secure)</h3>
