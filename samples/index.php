@@ -28,16 +28,17 @@
 	    	<h1>Cybersource PHP SDK</h1>
 		    <h3>Auth / Sale / Void / Refund</h3>
 
-<pre>
-Authorize    => Full Authorization
-Settlement   => Void
-Transmitted  => Refeund
-</pre>
+			<pre>
+			Authorize    => Full Authorization
+			Settlement   => Void
+			Transmitted  => Refeund
+			</pre>
+
 		    <ul>
 		    	<li><a href="AuthFromNameValuePairs.php">AuthFromNameValuePairs</a></li>
 		    	<li><a href="AuthFromXml.php">AuthFromXml</a></li>
 		    	<li><a href="AuthFollowOnCapture.php">Auth Follow On Capture</a></li>
-		    	<li><a href="Sale.php">Sale (And and Capture)</a></li>
+		    	<li><a href="Sale.php">Sale (Auth and Capture)</a></li>
 		    	<li><a href="AuthAndReverse.php">Auth And Reverse</a></li>
 		    	<li><a href="Credit.php">Credit (Refund)</a></li>
 		    </ul>
@@ -61,9 +62,7 @@ Transmitted  => Refeund
 
 		    <h3>Decision Management</h3>
 		    <ul>
-		    	<li><a href="DMAuthWeb.php">DMAuthWeb</a></li>
-		    	<li><a href="DMAuthApi.php">DMAuthApi</a></li>
-		    	<li><a href="DMAuthNVP.php">DMAuthNVP</a></li>
+		    	<li><a href="DeviceFingerprintForm.php">Sale with Device Fingerprint ID</a></li>
 		    </ul>
 	    </div>
 	</div>

@@ -38,8 +38,11 @@ $request['deviceFingerprintID']     = @$_POST['sess_id'];
 
 $reply = $client->runTransaction($request);
 
-// This section will show all the reply fields.
 echo '<pre>';
+
+print("\nREQUEST: " . print_r($request, true));
+echo PHP_EOL;
+
 echo 'RESPONSE: ' . PHP_EOL;
 print_r($reply);
 echo '</pre>' . PHP_EOL;
