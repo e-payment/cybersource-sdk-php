@@ -36,6 +36,7 @@
 
 		    <ul>
 		    	<li><a href="AuthFromNameValuePairs.php">AuthFromNameValuePairs</a></li>
+		    	<li><a href="Reversal.php">Reversal</a></li>
 		    	<li><a href="AuthFromXml.php">AuthFromXml</a></li>
 		    	<li><a href="AuthFollowOnCapture.php">Auth Follow On Capture</a></li>
 		    	<li><a href="Sale.php">Sale (Auth and Capture)</a></li>
