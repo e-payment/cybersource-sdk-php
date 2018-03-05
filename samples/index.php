@@ -48,8 +48,8 @@
 		    <h3>Payer Authen (3-D Secure)</h3>
 		    <ul>
 		    	<li><a href="PayerAuthEnroll.php">PayerAuthEnroll</a></li>
-		    	<li><a href="PayerAuthValidate.php">PayerAuthValidate</a></li>
-		    	<li><a href="ACSResponse.php">ACSResponse</a></li>
+		    	<li>PayerACSResponse</li>
+		    	<li>PayerAuthValidate</li>
 		    </ul>
 
 		    <h3>Payment Tokenization</h3>
