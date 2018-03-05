@@ -9,6 +9,7 @@ session_start();
 
 $sess_id  = session_id();
 $df_param = 'org_id=' . DF_ORG_ID . '&amp;session_id=' . MERCHANT_ID . $sess_id;
+$df_param .= '&amp;t=' . time();
 
 ?>
 

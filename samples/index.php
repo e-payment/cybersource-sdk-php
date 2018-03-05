@@ -26,15 +26,26 @@
 	<div class="col-sm-8 col-md-8 col-lg-6">
 	    <div class="row">
 	    	<h1>Cybersource PHP SDK</h1>
-		    <h3>Auth / Sale / Void / Refund</h3>
+		    <h3>Flow</h3>
 
-			<pre>
-			Authorize    => Full Authorization
-			Settlement   => Void
-			Transmitted  => Refeund
-			</pre>
+<pre>
+Before State   Perform Action        Change to State
+------------   ------------------    ---------------------------------
+None           => Authorize          Authorized
+               => Sale               Settled
 
-		    <ul>
+Authorized     => Capture            Settled
+               => Reversal           Authorization Reversal
+
+Settled        => Void               Voided Transaction, then Reversal
+               => Credit             Credit Transaction (Refund)
+               * On Settlement Time  Transmitted
+
+Credit         => Void               Settled
+               * On Settlement Time  Refund
+</pre>
+			<h3>Auth / Capture / Sale / Void / Refund</h3>
+			<ul>
 		    	<li><a href="AuthFromNameValuePairs.php">AuthFromNameValuePairs</a></li>
 		    	<li><a href="Reversal.php">Reversal</a></li>
 		    	<li><a href="AuthFromXml.php">AuthFromXml</a></li>
@@ -45,7 +56,7 @@
 		    	<li><a href="Void.php">Void</a></li>
 		    </ul>
 
-		    <h3>Payer Authen (3-D Secure)</h3>
+		    <h3>Payer Authentication (3-D Secure)</h3>
 		    <ul>
 		    	<li><a href="PayerAuthEnroll.php">PayerAuthEnroll</a></li>
 		    	<li>PayerACSResponse</li>

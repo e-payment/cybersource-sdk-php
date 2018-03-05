@@ -2,6 +2,10 @@
 
 $PaRes = @$_POST['PaRes'];
 
+if (empty($PaRes)) {
+	die('empty PaRes value');
+}
+
 ?>
 
 <pre>
