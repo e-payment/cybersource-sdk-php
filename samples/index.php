@@ -46,6 +46,7 @@ Credit         => Void               Settled
 </pre>
 			<h3>Auth / Capture / Sale / Void / Refund</h3>
 			<ul>
+				<li><a href="http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SO_API/Credit_Cards_SO_API.pdf" target="_creditCard_SO_API">(PDF) Using Simple Order API</a></li>
 		    	<li><a href="AuthFromNameValuePairs.php">AuthFromNameValuePairs</a></li>
 		    	<li><a href="Reversal.php">Reversal</a></li>
 		    	<li><a href="AuthFromXml.php">AuthFromXml</a></li>
@@ -58,6 +59,7 @@ Credit         => Void               Settled
 
 		    <h3>Payer Authentication (3-D Secure)</h3>
 		    <ul>
+		    	<li><a href="http://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SO_API/Payer_Authentication_SO_API.pdf" target="_payerAuthen">(PDF) Using Payer Authentication</a></li>
 		    	<li><a href="PayerAuthEnroll.php">PayerAuthEnroll</a></li>
 		    	<li>PayerACSResponse</li>
 		    	<li>PayerAuthValidate</li>
@@ -65,21 +67,30 @@ Credit         => Void               Settled
 
 		    <h3>Payment Tokenization</h3>
 		    <ul>
-		    	<li><a href="PaymentToken.php">PaymentToken</a></li>
+		    	<li><a href="http://apps.cybersource.com/library/documentation/dev_guides/Payment_Tokenization/SO_API/Payment_Tokenization_SO_API.pdf" target="_paymentToken">(PDF) Using Payment Tokenization</a></li>
+		    	<li><a href="PaymentToken.php">Payment Tokenization</a></li>
+		    	<li>Creating a Customer Profile</li>
+		    	<li>Updating a Customer Profile</li>
+		    	<li><a href="RetrievingCustomerProfile.php">Retrieving a Customer Profile</a></li>
 		    </ul>
 
 		    <h3>Recurring Billing</h3>
 		    <ul>
+		    	<li><a href="http://apps.cybersource.com/library/documentation/dev_guides/Recurring_Billing/SO_API/Recurring_Billing_SO_API.pdf" target="_recurring">(PDF) Using Recurring Billing</a></li>
 		    	<li><a href="Subscription.php">Subscription</a></li>
+		    	<li>Creating a Customer Subscription</li>
 		    </ul>
 
 		    <h3>Decision Management</h3>
 		    <ul>
+		    	<li><a href="https://goo.gl/dWMyo3" target="_deviceFingerprint">(WEB) What is Device Fingerprint?</a></li>
 		    	<li><a href="DeviceFingerprintForm.php">Sale with Device Fingerprint ID</a></li>
 		    </ul>
 	    </div>
 	</div>
 </div>
+
+<hr>
 
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
