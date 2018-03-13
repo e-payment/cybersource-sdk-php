@@ -39,7 +39,6 @@ $request->card         = $card;
 $recurringSubscriptionInfo = new stdClass();
 $recurringSubscriptionInfo->frequency = 'on-demand';
 $request->recurringSubscriptionInfo = $recurringSubscriptionInfo;
-// recurring_frequency, recurring_payment_amount]
 
 $paySubscriptionCreateService = new stdClass();
 $paySubscriptionCreateService->run = 'true';
@@ -53,31 +52,3 @@ header("Content-Type: text/plain");
 print_r($reply);
 echo PHP_EOL;
 
-
-/*
-
-billTo_firstName=John
-billTo_lastName=Doe
-billTo_street1=1295 Charleston Road
-billTo_city=Mountain View
-billTo_state=CA
-billTo_postalCode=94043
-billTo_country=US
-billTo_email=null@cybersource.com
-
-purchaseTotals_currency=USD
-
-card_accountNumber=4111111111111111
-card_expirationMonth=12
-card_expirationYear=2018
-card_cardType=001
-
-merchantID=demoID
-merchantReferenceCode=1111
-
-recurringSubscriptionInfo_frequency=on-demand
-paySubscriptionCreateService_run=true
-
-*/
-
-// EOF
