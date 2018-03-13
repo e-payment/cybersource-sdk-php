@@ -9,7 +9,7 @@ require_once(__DIR__ . '/../lib/CybsSoapClient.php');
 require_once('config.php');
 
 // Before using this example, you can use your own reference code for the transaction.
-$subscriptionID = '5075548937676785103528';
+$subscriptionID = '5209349185726549503009';
 $referenceCode  = date('YmdHis');
 
 $client = new CybsSoapClient($soap_config);

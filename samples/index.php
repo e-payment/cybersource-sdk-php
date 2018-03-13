@@ -68,10 +68,11 @@ Credit         => Void               Settled
 		    <h3>Payment Tokenization</h3>
 		    <ul>
 		    	<li><a href="http://apps.cybersource.com/library/documentation/dev_guides/Payment_Tokenization/SO_API/Payment_Tokenization_SO_API.pdf" target="_paymentToken">(PDF) Using Payment Tokenization</a></li>
-		    	<li><a href="PaymentToken.php">Payment Tokenization</a></li>
-		    	<li>Creating a Customer Profile</li>
+		    	<li><a href="TokenCreate.php">Creating a Customer Profile</a> Ex. paySubscriptionCreateReply->subscriptionID => 5209349185726549503009</li>
+		    	<li><a href="TokenRetrieve.php">Retrieving a Customer Profile</a></li>
+		    	<li><a href="TokenPayment.php">Payment Tokenization</a></li>
 		    	<li>Updating a Customer Profile</li>
-		    	<li><a href="RetrievingCustomerProfile.php">Retrieving a Customer Profile</a></li>
+		    	<li>Delete a Customer Profile</li>
 		    </ul>
 
 		    <h3>Recurring Billing</h3>
@@ -83,7 +84,7 @@ Credit         => Void               Settled
 
 		    <h3>Decision Management</h3>
 		    <ul>
-		    	<li><a href="https://goo.gl/dWMyo3" target="_deviceFingerprint">(WEB) What is Device Fingerprint?</a></li>
+		    	<li><a href="https://goo.gl/dWMyo3" target="_deviceFingerprint">(Web) What is Device Fingerprint?</a></li>
 		    	<li><a href="DeviceFingerprintForm.php">Sale with Device Fingerprint ID</a></li>
 		    </ul>
 	    </div>
